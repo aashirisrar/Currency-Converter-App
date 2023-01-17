@@ -54,7 +54,7 @@
         </form>
 
         <h2 class="mt-3">Results</h2>
-        <p id="result">Fill the fields and click submit to get the exchange rates here.</p>
+        <p class="mt-3" id="result">Fill the fields and click submit to get the exchange rates here.</p>
 
     </main>
 
@@ -77,7 +77,7 @@
             r.then((response) => {
                 return response.json();
             }).then((resp) => {
-                let htmlstr = `${resp.old_amount} ${resp.old_currency} equals to ${resp.new_amount} ${resp.new_currency}`;
+                let htmlstr = `${resp.old_amount} ${resp.old_currency} equals <br> <h2 class="mt-3"> ${resp.new_amount} ${resp.new_currency}<h2>`;
                 result.innerHTML = htmlstr;
                 return resp;
             })
